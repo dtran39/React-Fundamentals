@@ -1,0 +1,24 @@
+1. NPM: Node package manager:
+	- allows you to easily manage different packages (modules) and keep track of which version you've installed
+	- Npm comes with node
+	Initialize npm project:
+	+ npm init: create package.json:
+		keep track of which packages or modules you've installed in your project
+	+ node_modules: folder that contains package modules
+	+ Npm scripts: create short alias to run long npm commands:
+		Ex: 
+		"scripts": {
+    		"test": "ava 'app/**/*.test.js' --verbose --require ./other/setup-ava-tests.js"
+  		}
+  		So when you run "npm run test" your code will be tested in Ava
+2. Webpack:
+	- a code bundler
+	- takes your code, transforms and bundles it, then returns a brand new version of your code
+	- Why need it:
+		+  you're able to tell it every transformation your code needs to make, 
+		+ and it will do them and output a bundle file for you full of those changes 
+		+ ex: jsx, es6, Sass/Less, CoffeeScript
+	- 3 things webpack needs to know:
+		+ entry point file
+		+ what transformation to make
+		+ output location
