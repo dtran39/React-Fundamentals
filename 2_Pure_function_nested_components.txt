@@ -1,0 +1,29 @@
+1. Nested Components and Props in React
+	- prop: a simple system for passing data from one component to another child component
+		+ props are to components what arguments are to functions.
+	- Array.prototype.map:
+		it creates a new array, 
+		calls our callback function on each item in the array, 
+		and fills the new array with the result of calling the callback function on each item
+	- render function can only return one element
+		+ need to wrap a div if there are more than one element
+2. Building UIs with Pure Functions and Function Composition in React
+	- Funcitonal programming paradigm
+	- Pure function: 
+		+ Evaluates the same result given the same arguments
+		+ Doesn't depend on and doesn't modify the states of variables out of its scope
+	-> Advantages:
+		- Easier to think about (no need to care about the state of the app)
+		- Easy to test
+		- easy to reuse
+		- easy to reproduce the result
+		- no side effects
+	- slice vs splice:
+		slice: create a copy and modify that 
+		splice: modify the original array
+3. Testing react component: FIRST:
+	Focused
+	Independent
+	Reusable
+	Small
+	Testable

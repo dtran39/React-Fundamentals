@@ -11,6 +11,7 @@
     		"test": "ava 'app/**/*.test.js' --verbose --require ./other/setup-ava-tests.js"
   		}
   		So when you run "npm run test" your code will be tested in Ava
+  	+ 
 2. Webpack:
 	- a code bundler
 	- takes your code, transforms and bundles it, then returns a brand new version of your code
