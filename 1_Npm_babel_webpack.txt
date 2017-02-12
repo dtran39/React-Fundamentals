@@ -22,3 +22,36 @@
 		+ entry point file
 		+ what transformation to make
 		+ output location
+		determine in webpack.config.js
+3. Component:
+	- a collection of HTML, CSS, JS, and some internal data specific to that component
+	- data is either received from a component’s parent component, or it’s contained in the component itself
+	- every component is required to have a render method
+		+ Because render is essentially the template for our component.
+	ReactDOM.render:
+		takes:
+			 component you want to render
+			  the DOM node where you want to render the component
+	JSX:
+		- JSX simply allows us to write HTML like syntax 
+			which gets transformed to lightweight JavaScript objects
+		- React is then able to take these JavaScript objects 
+		and from them form a “virtual DOM” 
+			or a JavaScript representation of the actual DOM
+		- 
+4. Virtual DOM paradigm:
+	- since the virtual DOM is a JavaScript representation of the actual DOM, 
+		React can keep track of the difference between 
+			the current virtual DOM (computed after some data changes), 
+			with the previous virtual DOM (computed befores some data changes)
+	-  React then isolates the changes between the old and new virtual DOM 
+		and then only updates the real DOM with the necessary changes
+	-> Which therefore replaces manipulating the DOM (slow process) 
+	and only updating the real DOM when necessary and with only the necessary changes.
+	- By re-rendering the virtual DOM every time any state change occurs, 
+		React makes it easier to think about what state your application is in.
+	The process:
+		Signal to notify our app some data has changed→ 
+		Re-render virtual DOM -> 
+		Diff previous virtual DOM with new virtual DOM ->
+		 Only update real DOM with necessary changes.
