@@ -1,0 +1,6 @@
+1. this.props.children in React
+  - getting the values between the opening and closing tags
+  - return an array
+2. React router
+  - Gives us a declarative ways to express our routing
+  - Maps certain components to certain url
