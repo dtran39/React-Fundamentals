@@ -1,0 +1,32 @@
+I. When we call set state, the current component and all of its children will be re rendered
+II. React life cycle order in a nutshell:
+  1. getInitialState: initializing function (like constructor)
+    + Establishing the state
+  2. componentWillMount: run before rendering
+  3. componentDidMount: run after rendering has finished
+  4. componentWillUnmount: run when we switch to new route or different component
+  componentWillReceiveProps: run anytime component receive new props
+III. Life cycle:
+   Lifecycle methods are special methods each component can have
+    that allow us to hook into the views when specific conditions happen
+  Categories of life cycle method:
+  1.  When a component gets mounted to the DOM and unmounted.
+    - These methods will be invoked only once during the life of the component.
+    Things we need to do:
+      1. Establish some default props in our component
+      2. Set some initial state in our component
+      3. Make an Ajax request to fetch some data needed for this component
+        + Perform this in componentDidMount,
+            who get called right after the component is mounted to the DOM.
+      4. Set up any listeners (ie Websockets or Firebase listeners)
+        + Also performed in componentDidMount
+      5. Remove any listeners you initially set up (when unmounted)
+        + Performed in componentWillUnMount
+  2. When a component receives new data.
+    - componentWillReceiveProps
+      + Performed when components receive new props
+    - shouldComponentUpdate:
+      + React is very intelligent about not re-rendering unless something changed
+      + You can make it even more intelligent by implementing shouldComponentUpdate
+      + component will only re-render if shouldComponentUpdate returns true
+      + HUGE PERFORMANCE gain
