@@ -45,9 +45,18 @@ var ConfirmBattleContainer = React.createClass({
        .bind(arg)saying the this keyword inside the function, will now be arg
        */
   },
+  handleInitiateBattle: function(){
+    this.context.router.push({
+      pathname: '/results',
+      state: {
+        playersInfo: this.state.playersInfo
+      }
+    });
+  },
 	render: function(){
 		return (
       <ConfirmBattle
+        initiateBattle={this.handleInitiateBattle}
         isLoading={this.state.isLoading}
         playersInfo={this.state.playersInfo}
       />
