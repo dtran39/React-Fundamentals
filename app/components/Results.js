@@ -5,7 +5,9 @@ var styles = require('../styles');
 var UserDetails = require('../components/UserDetails');
 var UserDetailsWrapper = require('../components/UserDetailsWrapper');
 var MainContainer = require('../components/MainContainer');
+var Loading = require('../components/Loading');
 var Link = ReactRouter.Link;
+
 // Private stateless functional components StartOver
 // Reusable just inside results components
 // Private because it is not exported
@@ -25,7 +27,7 @@ function puke(obj) {
 function Results(props){
   if (props.isLoading === true) {
     return (
-      <p>Loading</p>
+      <Loading speed={200} text="Waiting for results" />
     )
   }
   // console.log(puke(props));

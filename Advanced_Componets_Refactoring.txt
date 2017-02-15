@@ -1,0 +1,9 @@
+React is all about modularity.
+  - As your render method grows,
+    it's a good habit to take pieces and abstract them to new components.
+  - Private component doesn't have this keyword associated
+    + Removed the confusion of what context this is in
+2. getDefaultProps:
+  - specify what the default props will be in a component
+    if those specific props aren't specified when the component is invoked.
+    (like constructor for java, getInitialState for React state)
